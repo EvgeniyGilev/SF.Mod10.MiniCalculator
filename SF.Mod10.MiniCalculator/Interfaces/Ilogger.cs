@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SF.Mod10.MiniCalculator.Interfaces
+﻿namespace SF.Mod10.MiniCalculator.Interfaces
 {
+    /// <summary>
+    /// The logger.
+    /// </summary>
     public interface ILogger
     {
+        /// <summary>
+        /// Events the.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="severity">The severity.</param>
         public void Event(string message, int severity);
-
-
     }
 }
