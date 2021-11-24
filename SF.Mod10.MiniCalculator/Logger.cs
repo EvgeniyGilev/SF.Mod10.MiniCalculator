@@ -18,7 +18,7 @@ namespace SF.Mod10.MiniCalculator
             switch (severity)
             {
                 case 0:
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("\nINFO: " + message);
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;

@@ -9,11 +9,6 @@ namespace SF.Mod10.MiniCalculator
     public class MiniCalculator : IIntCalculate
     {
         /// <summary>
-        /// Gets the logger.
-        /// </summary>
-        private ILogger Logger { get; }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="MiniCalculator"/> class.
         /// </summary>
         /// <param name="logger">The logger.</param>
@@ -23,11 +18,16 @@ namespace SF.Mod10.MiniCalculator
         }
 
         /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        private ILogger Logger { get; }
+
+        /// <summary>
         /// Difference the two numbers.
         /// </summary>
         /// <param name="number1">The number1.</param>
         /// <param name="number2">The number2.</param>
-        /// <returns>An int.</returns>
+        /// <returns>Subs 2 numbers.</returns>
         int IIntCalculate.DifferenceTwoNumbers(int number1, int number2)
         {
             try
@@ -48,7 +48,7 @@ namespace SF.Mod10.MiniCalculator
         /// </summary>
         /// <param name="number1">The number1.</param>
         /// <param name="number2">The number2.</param>
-        /// <returns>An int.</returns>
+        /// <returns>Div 2 numbers.</returns>
         int IIntCalculate.DividingTwoNumbers(int number1, int number2)
         {
             try
@@ -61,8 +61,6 @@ namespace SF.Mod10.MiniCalculator
                 this.Logger.Event("Ошибка при делении: " + ex.Message, -1);
                 return 0;
             }
-
-
         }
 
         /// <summary>
@@ -70,7 +68,7 @@ namespace SF.Mod10.MiniCalculator
         /// </summary>
         /// <param name="number1">The number1.</param>
         /// <param name="number2">The number2.</param>
-        /// <returns>An int.</returns>
+        /// <returns>Multiply 2 numbers.</returns>
         int IIntCalculate.MultiplicationTwoNumbers(int number1, int number2)
         {
             try
@@ -83,7 +81,6 @@ namespace SF.Mod10.MiniCalculator
                 this.Logger.Event("Ошибка при умножении: " + ex.Message, -1);
                 return 0;
             }
-
         }
 
         /// <summary>
@@ -91,7 +88,7 @@ namespace SF.Mod10.MiniCalculator
         /// </summary>
         /// <param name="number1">The number1.</param>
         /// <param name="number2">The number2.</param>
-        /// <returns>An int.</returns>
+        /// <returns>Sum 2 numbers.</returns>
         int IIntCalculate.SumTwoNumbers(int number1, int number2)
         {
             try

@@ -6,7 +6,7 @@ namespace SF.Mod10.MiniCalculator
     /// <summary>
     /// The program.
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
         /// Gets or sets the logger.
@@ -17,7 +17,7 @@ namespace SF.Mod10.MiniCalculator
         /// Mains the.
         /// </summary>
         /// <param name="args">The arguments.</param>
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Logger = new Logger();
             var miniCalculator = new MiniCalculator(Logger);
@@ -28,6 +28,7 @@ namespace SF.Mod10.MiniCalculator
             {
                 try
                 {
+                    Console.WriteLine(string.Empty);
                     Console.WriteLine("Введите число 1:");
                     var number1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Введите число 2:");
@@ -63,12 +64,13 @@ namespace SF.Mod10.MiniCalculator
                 }
                 catch (Exception e)
                 {
-                    Logger.Event("Произошла ошибка, обратитесь к разработчику " + e.Message, -1);
+                    Logger.Event("Произошла ошибка, проверьте корректность введенных данных " + e.Message, -1);
                     Console.ReadKey();
                 }
 
                 Console.WriteLine("Нажмите пробел для выхода или любую клавишу для повторного ввода чисел");
-            } while (Console.ReadKey().Key != ConsoleKey.Spacebar);
+            }
+            while (Console.ReadKey().Key != ConsoleKey.Spacebar);
 
             Console.WriteLine("Нажата клавиша пробел, выход");
             Console.ReadKey();
